@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 import java.util.logging.Logger;
+import java.util.stream.Collectors;
 
 @Service
 public class DepartmentServiceImpl implements DepartmentService {
@@ -30,8 +31,15 @@ public class DepartmentServiceImpl implements DepartmentService {
     }
 
     @Override
-    public List<Department> getAllDepartments() {
-        return this.departmentRepository.findAll();
+    public List<Department> getAllDepartments()
+    {
+        List<Department> departments= this.departmentRepository.findAll();
+        List<Department> allDepartments= departments.stream().map(department->{
+            ArrayList<Employee> employeesInDepartment=restTemplate.getForObject("http://EMPLOYEE-SERVICE/employee/department/"+department.getDeptId()+"/", ArrayList.class);
+            department.setEmployeeList(employeesInDepartment);
+            return department;
+        }).collect(Collectors.toList());
+        return allDepartments;
     }
 
     @Override
@@ -40,7 +48,7 @@ public class DepartmentServiceImpl implements DepartmentService {
         //fetch employeelist
         //employeeby dept id use hoga
 
-        ArrayList<Employee> employeesInDepartment=restTemplate.getForObject("http://localhost:8082/employee/department/"+department.getDeptId()+"/", ArrayList.class);
+        ArrayList<Employee> employeesInDepartment=restTemplate.getForObject("http://EMPLOYEE-SERVICE/employee/department/"+department.getDeptId()+"/", ArrayList.class);
         department.setEmployeeList(employeesInDepartment);
         return department;
     }

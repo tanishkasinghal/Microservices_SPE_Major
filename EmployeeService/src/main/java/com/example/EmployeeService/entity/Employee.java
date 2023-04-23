@@ -37,5 +37,19 @@ public class Employee {
 
     @Column(nullable = false)
     private String password;
+    @Transient
+    private Department department;
+
+    @ManyToMany(fetch = FetchType.EAGER,
+            cascade =
+                    {
+                            CascadeType.DETACH,
+                            CascadeType.MERGE,
+                            CascadeType.REFRESH,
+                            CascadeType.PERSIST
+                    })
+    @JoinTable(name = "emp_role",
+            joinColumns=@JoinColumn(name="employee",referencedColumnName = "id"),inverseJoinColumns = @JoinColumn(name = "role",referencedColumnName = "id"))
+    private Set<Role> roles=new HashSet<>();
 
 }

@@ -8,10 +8,10 @@ import java.util.List;
 public interface EmployeeService {
     Employee registerNewUser(Employee employee);
     Employee addEmployee(Employee employee);
-    Employee updateEmployeeDetails(Employee employee,Long id);
+    Employee updateEmployeeDetails(Employee employee,String id);
     Employee getEmployeeById(String id);
     EmployeeResponse getAllEmployee(Integer pageNumber, Integer pageSize, String sortBy, String sortDir);
-    void deleteEmployee(Long id);
+    void deleteEmployee(String id);
 
      List<Employee> getEmployeeByDepartment(String departmentId);
     List<Employee> serachEmployee(String name);
