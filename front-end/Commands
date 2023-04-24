@@ -1,0 +1,10 @@
+npm install reactstrap
+npm install bootstrap
+npm install react-router-dom@6
+npm install axios
+npm install react-toastify
+
+BASE_URL=http://localhost:8082
+/api/auth/register/3
+
+//problem in pagination...will check later
