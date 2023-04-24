@@ -35,7 +35,8 @@ public class EmployeeServiceImpl implements EmployeeService{
     private RoleRepository roleRepository;
     @Override
     public Employee registerNewUser(Employee employee) {
-
+        String randomDepId= UUID.randomUUID().toString();
+        employee.setId(randomDepId);
         employee.setPassword(this.passwordEncoder.encode(employee.getPassword()));
         employee.setJoiningDate(new Date());
         //roles
