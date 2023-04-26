@@ -27,9 +27,9 @@ const AddEmployee = () => {
         emailId:'',
         password:'',
         deptId:'',
-        manager: {
-            id: ''
-        }
+        // manager: {
+        //     id: ''
+        // }
     })
 
     const [error, setError] = useState({
@@ -48,9 +48,9 @@ const AddEmployee = () => {
         emailId:'',
         password:'',
         deptId:'',
-        manager: {
-            id: ''
-        }
+        // manager: {
+        //     id: ''
+        // }
         })
     }
 
@@ -71,14 +71,14 @@ const AddEmployee = () => {
             alert("password is required")
             return;
         }
-        // if(data.deptId===''){
-        //     alert("Assign Department")
-        //     return;
-        // }
-        if(data.manager.id===''){
-            alert("Assign manager")
+        if(data.deptId===''){
+            alert("Assign Department")
             return;
         }
+        // if(data.manager.id===''){
+        //     alert("Assign manager")
+        //     return;
+        // }
        // console.log(data)
         addEmployee(data).then((resp)=>{
             alert("Employee Registered")
@@ -128,16 +128,20 @@ const AddEmployee = () => {
                             <Input type='password' id='password' value={data.password} onChange={(e)=>handleChange(e,'password')}/>
                         </FormGroup>
                         <FormGroup>
-                        {/* <Label for="department">Department</Label>
+                         <Label for="department">Department</Label>
                             <Input id="department" defaultValue={0} name="deptId" type="select" onChange={(e)=>handleChange(e,'deptId')}>
                                 <option disabled value={0}>-- Select Category --</option>
                             {
                                 departments.map((department)=>(
-                                    <option value={department.id} key={department.id }>{department.deptName}</option>
+                                    <>
+                
+                                    <option value={department.deptId} key={department.deptId }>{department.deptName}</option>
+                                    </>
+                             
                                 ))
                             }
-                            </Input> */}
-                         <Label for="manager">Manager</Label>
+                            </Input> 
+                         {/*<Label for="manager">Manager</Label>
                             <Input id="manager" defaultValue={0} name="manager.id" type="select" onChange={(e)=>handleChange(e,'manager.id')}>
                                 <option disabled value={0}>-- Select Category --</option>
                             {
@@ -145,7 +149,7 @@ const AddEmployee = () => {
                                     <option value={department.id} key={department.id }>{department.deptName}</option>
                                 ))
                             }
-                            </Input>
+                            </Input>*/}
                         </FormGroup>
                         <Container className='text-center'>
                             <Button type='submit' color='dark'>Register</Button>

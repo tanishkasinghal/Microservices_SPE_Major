@@ -4,7 +4,6 @@ import com.example.EmployeeService.entity.Employee;
 import com.example.EmployeeService.exception.ApiException;
 import com.example.EmployeeService.payload.JwtAuthRequest;
 import com.example.EmployeeService.payload.JwtAuthResponse;
-import com.example.EmployeeService.security.JwtTokenHelper;
 import com.example.EmployeeService.services.EmployeeService;
 import jakarta.validation.constraints.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,21 +14,16 @@ import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/auth")
 public class AuthController {
-    private final JwtTokenHelper jwtTokenHelper;
     private final UserDetailsService userDetailsService;
     private final AuthenticationManager authenticationManager;
     @Autowired
     private EmployeeService employeeService;
-    public AuthController(JwtTokenHelper jwtTokenHelper, UserDetailsService userDetailsService, AuthenticationManager authenticationManager) {
-        this.jwtTokenHelper = jwtTokenHelper;
+    public AuthController(UserDetailsService userDetailsService, AuthenticationManager authenticationManager) {
         this.userDetailsService = userDetailsService;
         this.authenticationManager = authenticationManager;
     }
@@ -39,12 +33,33 @@ public class AuthController {
         this.authenticate(request.getUsername(),request.getPassword());
         UserDetails userDetails = this.userDetailsService.loadUserByUsername(request.getUsername());
         System.out.println("Spring user details "+userDetails);
-        String token = this.jwtTokenHelper.generateToken(userDetails);
+        String token = this.employeeService.generateToken(userDetails);
         System.out.println("Token"+token);
         JwtAuthResponse response = new JwtAuthResponse();
         response.setToken(token);
         response.setEmployee((Employee) userDetails);
         return new ResponseEntity<JwtAuthResponse>(response, HttpStatus.OK);
+    }
+    @PostMapping("/token")
+    public String getToken(@RequestBody JwtAuthRequest request) throws Exception{
+        this.authenticate(request.getUsername(),request.getPassword());
+        UserDetails userDetails = this.userDetailsService.loadUserByUsername(request.getUsername());
+        return employeeService.generateToken(userDetails);
+    }
+//
+//    @PostMapping("/validate")
+//    public Boolean validateToken(@RequestParam("token") String token,@RequestBody JwtAuthRequest request) throws Exception{
+//        this.authenticate(request.getUsername(),request.getPassword());
+//        UserDetails userDetails = this.userDetailsService.loadUserByUsername(request.getUsername());
+//        return employeeService.validateToken(token,userDetails);
+//    }
+
+
+
+    @GetMapping("/validate")
+    public String validateToken(@RequestParam("token") String token) throws Exception{
+         employeeService.validToken(token);
+         return "Token is Valid";
     }
 
     private void authenticate(String username, String password) throws Exception {

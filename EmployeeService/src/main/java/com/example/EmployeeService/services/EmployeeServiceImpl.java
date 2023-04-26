@@ -13,6 +13,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -33,6 +34,8 @@ public class EmployeeServiceImpl implements EmployeeService{
     private RestTemplate restTemplate;
     @Autowired
     private RoleRepository roleRepository;
+    @Autowired
+    private JwtService jwtService;
     @Override
     public Employee registerNewUser(Employee employee) {
         String randomDepId= UUID.randomUUID().toString();
@@ -45,6 +48,7 @@ public class EmployeeServiceImpl implements EmployeeService{
         return this.employeeRepository.save(employee);
 
     }
+
 
     @Override
     public Employee addEmployee(Employee employee) {
@@ -89,6 +93,7 @@ public class EmployeeServiceImpl implements EmployeeService{
         Page<Employee> pageEmployees=this.employeeRepository.findAll(p);
         List<Employee> allEmployees=pageEmployees.getContent();
         List<Employee> allEmployee= allEmployees.stream().map(employee->{
+            System.out.println(employee.getDeptId());
             Department department = restTemplate.getForObject("http://DEPARTMENT-SERVICE/department/" + employee.getDeptId(), Department.class);
             employee.setDepartment(department);
             return employee;
@@ -107,6 +112,21 @@ public class EmployeeServiceImpl implements EmployeeService{
     public void deleteEmployee(String id) {
         Employee employee=this.employeeRepository.findById(id).orElseThrow(()-> new ResourceNotFoundException("Employee with given id not found"+id));
         this.employeeRepository.delete(employee);
+    }
+
+    @Override
+    public String generateToken(UserDetails userDetails) {
+        return jwtService.generateToken(userDetails);
+    }
+
+    @Override
+    public Boolean validateToken(String token, UserDetails userDetails) {
+        return jwtService.validateToken(token,userDetails);
+    }
+
+    @Override
+    public void validToken(String token){
+         jwtService.validToken(token);
     }
 
     @Override

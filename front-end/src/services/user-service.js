@@ -1,7 +1,7 @@
 import { myAxios, privateAxios } from "./helper";
  export const addEmployee=(emp)=>{
     console.log(emp)
-    return privateAxios.post(`/employee/register/${emp.dept_id}`,emp).then((Response)=>Response.data);
+    return privateAxios.post(`/employee/register`,emp).then((Response)=>Response.data);
 };
 
 export const loadAllEmp=(pageNumber,pageSize)=>{

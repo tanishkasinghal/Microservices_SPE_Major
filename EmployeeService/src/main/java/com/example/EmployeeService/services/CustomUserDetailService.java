@@ -1,5 +1,4 @@
-package com.example.EmployeeService.security;
-
+package com.example.EmployeeService.services;
 
 import com.example.EmployeeService.entity.Employee;
 import com.example.EmployeeService.exception.ResourceNotFoundException;
@@ -18,7 +17,7 @@ public class CustomUserDetailService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException{
         //loading user from database by username
-        Employee employee=this.employeeRepository.findByEmailId(username).orElseThrow(()-> new ResourceNotFoundException("user with email not found: "+username));
+        Employee employee=this.employeeRepository.findByEmailId(username).orElseThrow(()-> new ResourceNotFoundException("username "+username));
         return employee;
     }
 
