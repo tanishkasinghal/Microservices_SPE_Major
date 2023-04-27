@@ -24,3 +24,9 @@ privateAxios.interceptors.request.use(config=>{
         console.log("token nhi hai")
     }
 },error=>Promise.reject(error))
+
+
+//8081 --> department
+//8082 --> Employee
+//8083 --> API Gateway
+//8761 --> Service Registry
