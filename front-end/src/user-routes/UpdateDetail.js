@@ -10,19 +10,20 @@ const UpdateDetail = () => {
     const {id} =useParams()
     //const object=useContext(userContext)
     const[departments,setDepartments]=useState([])
-     const [emp,setEmp]=useState(null)
-    //       const [emp, setEmp] = useState({
-    //     firstName:'',
-    //     lastName:'',
-    //     emailId:'',
-    //     password:'',
-    //     deptId:''
-    // })
+     //const [emp,setEmp]=useState(null)
+    const [emp, setEmp] = useState({
+        firstName:'',
+        lastName:'',
+        emailId:'',
+        password:'',
+        deptId:'',
+    })
 
     useEffect(() => {
         loadEmp(id).then(data=>{
-      console.log(data)
+      
       setEmp(data)
+      console.log(emp)
     }).catch(error=>{
       console.log(error)
     })
