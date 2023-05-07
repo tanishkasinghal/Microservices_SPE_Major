@@ -3,7 +3,6 @@ import { Link, useParams } from 'react-router-dom';
 import { Card, CardBody, CardText, Col, Container, Row, Table } from 'reactstrap';
 import { Base } from '../components/Base';
 import userContext from '../context/userContext';
-<<<<<<< HEAD
 import { getDepartment } from '../services/department-service';
 
 const Profile=()=> {
@@ -22,13 +21,6 @@ const Profile=()=> {
   },[])
   console.log("gg")
   console.log(user.user.data)
-=======
-
-const Profile=()=> {
-
-  const user=useContext(userContext)
-
->>>>>>> 06c6db59a885ec203916cddb2e61d4d33c4bca4e
   const printDate=(numbers)=>{
     return new Date(numbers).toLocaleDateString()
   }
@@ -44,11 +36,7 @@ const Profile=()=> {
             <Container className='text-center'>
               <img style={{maxWidth:'200px',maxHeight:'200px'}} src={require('../images/profile_picture.png')} alt='user profile picture' className='img-fluid'/>
             </Container>
-<<<<<<< HEAD
             {/* {console.log(user.user.data.department.deptName)} */}
-=======
-            {console.log(user.user.data.department.deptName)}
->>>>>>> 06c6db59a885ec203916cddb2e61d4d33c4bca4e
             <Table hover bordered={true} className='mt-5'>
               <tbody>
                 <tr>
@@ -88,11 +76,7 @@ const Profile=()=> {
                     Department Name
                   </td>
                   <td>
-<<<<<<< HEAD
                     {(dep) && dep.deptName}
-=======
-                    {user.user.data.department.deptName}
->>>>>>> 06c6db59a885ec203916cddb2e61d4d33c4bca4e
                   </td>
                 </tr>
               </tbody>

@@ -10,7 +10,6 @@ const UpdateDetail = () => {
     const {id} =useParams()
     //const object=useContext(userContext)
     const[departments,setDepartments]=useState([])
-<<<<<<< HEAD
      const [emp,setEmp]=useState(null)
     // const [emp, setEmp] = useState({
     //     firstName:'',
@@ -19,16 +18,6 @@ const UpdateDetail = () => {
     //     password:'',
     //     deptId:'',
     // })
-=======
-     //const [emp,setEmp]=useState(null)
-    const [emp, setEmp] = useState({
-        firstName:'',
-        lastName:'',
-        emailId:'',
-        password:'',
-        deptId:'',
-    })
->>>>>>> 06c6db59a885ec203916cddb2e61d4d33c4bca4e
 
     useEffect(() => {
         loadEmp(id).then(data=>{

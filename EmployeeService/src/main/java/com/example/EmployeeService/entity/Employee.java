@@ -1,9 +1,6 @@
 package com.example.EmployeeService.entity;
 
-<<<<<<< HEAD
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-=======
->>>>>>> 06c6db59a885ec203916cddb2e61d4d33c4bca4e
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -64,10 +61,7 @@ public class Employee implements UserDetails {
 
     @OneToMany(mappedBy="manager")
     private Set<Employee> subordinates = new HashSet<Employee>();
-<<<<<<< HEAD
     @JsonDeserialize(contentUsing = GrantedAuthorityDeserializer.class)
-=======
->>>>>>> 06c6db59a885ec203916cddb2e61d4d33c4bca4e
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         List<SimpleGrantedAuthority> authorities= this.roles.stream().map((role)-> new SimpleGrantedAuthority(role.getName())).collect(Collectors.toList());
