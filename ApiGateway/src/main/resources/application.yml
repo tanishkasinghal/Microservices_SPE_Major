@@ -1,0 +1,30 @@
+server:
+  port: 8083
+spring:
+  application:
+    name: API-GATEWAY
+  config:
+    import: optional:configserver:http://localhost:8084
+  cloud:
+    gateway:
+      routes:
+      - id: EMPLOYEE-SERVICE
+        uri: lb://EMPLOYEE-SERVICE
+        predicates:
+        - Path=/employee/**,/auth/**
+#        filters:
+#          - AuthenticationFilter
+
+      - id: DEPARTMENT-SERVICE
+        uri: lb://DEPARTMENT-SERVICE
+        predicates:
+          - Path=/department/**
+#        filters:
+#          - AuthenticationFilter
+#okta:
+#  oauth2:
+#    issuer: https://dev-63983701.okta.com/oauth2/default
+#    audience: api://default
+#    client-id: 0oa98jyr6s3QVvS6g5d7
+#    client-secret: GeyOocKDV8n_9Y8-JgIjmw0ccbNuodU_YgE2KPdS
+#    scopes: openid, profile, email, offline_access
