@@ -13,7 +13,10 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+<<<<<<< HEAD
 import org.springframework.http.ResponseEntity;
+=======
+>>>>>>> 06c6db59a885ec203916cddb2e61d4d33c4bca4e
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -65,8 +68,11 @@ public class EmployeeServiceImpl implements EmployeeService{
         employee.setEmailId(details.getEmailId());
         employee.setPassword(details.getPassword());
         employee.setDeptId(details.getDeptId());
+<<<<<<< HEAD
         employee.getRoles().clear();
         employee.getRoles().addAll(details.getRoles());
+=======
+>>>>>>> 06c6db59a885ec203916cddb2e61d4d33c4bca4e
         Employee updatedEmployee=this.employeeRepository.save(employee);
         return updatedEmployee;
     }
@@ -95,9 +101,13 @@ public class EmployeeServiceImpl implements EmployeeService{
         List<Employee> allEmployees=pageEmployees.getContent();
         List<Employee> allEmployee= allEmployees.stream().map(employee->{
             System.out.println(employee.getDeptId());
+<<<<<<< HEAD
             String id="c3a47102-9c47-4783-88c0-0b620bacd9b3";
             ResponseEntity<Department> response= restTemplate.getForEntity("http://DEPARTMENT-SERVICE/department/" + id, Department.class);
             Department department = response.getBody();
+=======
+            Department department = restTemplate.getForObject("http://DEPARTMENT-SERVICE/department/" + employee.getDeptId(), Department.class);
+>>>>>>> 06c6db59a885ec203916cddb2e61d4d33c4bca4e
             employee.setDepartment(department);
             return employee;
         }).collect(Collectors.toList());

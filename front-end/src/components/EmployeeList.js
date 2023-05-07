@@ -3,7 +3,10 @@ import { Button, Container, NavLink, Pagination, PaginationItem, PaginationLink,
 import { loadAllEmp } from '../services/user-service'
 import {toast} from 'react-toastify';
 import { Link, NavLink as ReactLink, useNavigate} from 'react-router-dom';
+<<<<<<< HEAD
 import { Base } from './Base';
+=======
+>>>>>>> 06c6db59a885ec203916cddb2e61d4d33c4bca4e
 
  const EmployeeList = () => {
   const [empList,setEmpList]=useState({
@@ -45,8 +48,11 @@ import { Base } from './Base';
   }
   
   return (
+<<<<<<< HEAD
     <Base>
     <div className="container">
+=======
+>>>>>>> 06c6db59a885ec203916cddb2e61d4d33c4bca4e
     <div className="container-fluid">
       <h2>Total Employees {empList.totalElements}</h2>
       <Table striped>
@@ -118,8 +124,11 @@ import { Base } from './Base';
   </Pagination>
 </Container>
     </div>
+<<<<<<< HEAD
     </div>
     </Base>
+=======
+>>>>>>> 06c6db59a885ec203916cddb2e61d4d33c4bca4e
   )
 }
 export default EmployeeList;

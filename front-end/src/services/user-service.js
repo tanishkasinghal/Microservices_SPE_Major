@@ -16,7 +16,11 @@ export const deleteEmp=(emp)=>{
     return privateAxios.delete(`/employee/${emp.id}`).then(Response=>Response.data)
 }
 export const updateDetail=(emp)=>{
+<<<<<<< HEAD
     return privateAxios.put(`/employee/${emp.id}`,emp).then(Response=>Response.data)
+=======
+    return privateAxios.put(`/employee/${emp.id}`).then(Response=>Response.data)
+>>>>>>> 06c6db59a885ec203916cddb2e61d4d33c4bca4e
 }
 
 //export default addEmployee;

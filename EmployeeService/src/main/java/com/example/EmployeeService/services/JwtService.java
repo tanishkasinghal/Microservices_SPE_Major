@@ -1,17 +1,25 @@
 package com.example.EmployeeService.services;
 
+<<<<<<< HEAD
 import com.example.EmployeeService.entity.Department;
 import com.example.EmployeeService.entity.Employee;
+=======
+>>>>>>> 06c6db59a885ec203916cddb2e61d4d33c4bca4e
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
+<<<<<<< HEAD
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
+=======
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.stereotype.Service;
+>>>>>>> 06c6db59a885ec203916cddb2e61d4d33c4bca4e
 
 import java.security.Key;
 import java.util.Date;
@@ -23,8 +31,12 @@ import java.util.function.Function;
 public class JwtService {
     public static final long JWT_TOKEN_VALIDITY = 5 * 60 * 60;
 
+<<<<<<< HEAD
     @Autowired
     private RestTemplate restTemplate;
+=======
+
+>>>>>>> 06c6db59a885ec203916cddb2e61d4d33c4bca4e
     private String secret = "jwtTokenKey";
 
     //retrieve username from jwt token
