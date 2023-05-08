@@ -21,6 +21,11 @@ spring:
           - Path=/department/**
 #        filters:
 #          - AuthenticationFilter
+
+      - id: LEAVE-SERVICE
+        uri: lb://LEAVE-SERVICE
+        predicates:
+          - Path=/leave/**
 #okta:
 #  oauth2:
 #    issuer: https://dev-63983701.okta.com/oauth2/default

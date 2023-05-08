@@ -55,12 +55,12 @@ public class Employee implements UserDetails {
             joinColumns=@JoinColumn(name="employee",referencedColumnName = "id"),inverseJoinColumns = @JoinColumn(name = "role",referencedColumnName = "id"))
     private Set<Role> roles=new HashSet<>();
 
-    @ManyToOne(cascade={CascadeType.ALL})
-    @JoinColumn(name="manager_id")
-    private Employee manager;
-
-    @OneToMany(mappedBy="manager")
-    private Set<Employee> subordinates = new HashSet<Employee>();
+//    @ManyToOne(cascade={CascadeType.ALL})
+//    @JoinColumn(name="manager_id")
+//    private Employee manager;
+//
+//    @OneToMany(mappedBy="manager")
+//    private Set<Employee> subordinates = new HashSet<Employee>();
     @JsonDeserialize(contentUsing = GrantedAuthorityDeserializer.class)
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

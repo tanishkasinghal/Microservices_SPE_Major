@@ -2,7 +2,7 @@ server:
   port: 8082
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/Emp_service?createDatabaseIfNotExist=true
+    url: jdbc:mysql://localhost:3306/Emp_service_without?createDatabaseIfNotExist=true
     username: root
     password: Admin123
     driver-class-name: com.mysql.cj.jdbc.Driver

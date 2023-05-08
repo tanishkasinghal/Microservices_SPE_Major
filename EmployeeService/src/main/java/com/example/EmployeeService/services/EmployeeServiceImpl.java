@@ -47,7 +47,6 @@ public class EmployeeServiceImpl implements EmployeeService{
         Role role=this.roleRepository.findById(AppConstants.NORMAL_USER).get();
         employee.getRoles().add(role);
         return this.employeeRepository.save(employee);
-
     }
     @Override
     public Employee addEmployee(Employee employee) {
@@ -97,7 +96,9 @@ public class EmployeeServiceImpl implements EmployeeService{
         List<Employee> allEmployee= allEmployees.stream().map(employee->{
             System.out.println(employee.getDeptId());
           //  String id="c3a47102-9c47-4783-88c0-0b620bacd9b3";
-            ResponseEntity<Department> response= restTemplate.getForEntity("http://DEPARTMENT-SERVICE/department/" + employee.getDeptId(), Department.class);
+            String url = "http://DEPARTMENT-SERVICE" + "/department/" + employee.getDeptId();
+            ResponseEntity<Department> response= restTemplate.getForEntity(url, Department.class);
+//            ResponseEntity<Department> response= restTemplate.getForEntity("http://DEPARTMENT-SERVICE/department/" + employee.getDeptId(), Department.class);
             Department department = response.getBody();
             employee.setDepartment(department);
             return employee;
