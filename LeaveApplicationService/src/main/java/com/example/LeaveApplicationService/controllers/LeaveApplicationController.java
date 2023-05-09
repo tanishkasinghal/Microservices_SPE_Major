@@ -21,7 +21,6 @@ public class LeaveApplicationController {
     public ResponseEntity<LeaveApplication> applyLeave(@Valid @RequestBody LeaveApplication leaveApplication){
         LeaveApplication newApplication=this.leaveApplicationService.addapplication(leaveApplication);
         return new ResponseEntity<>(newApplication, HttpStatus.CREATED);
-
     }
     @PostMapping("/submitResponse")
     public ResponseEntity<LeaveApplication> submitResponse(@Valid @RequestBody LeaveApplication leaveApplication){
@@ -37,6 +36,7 @@ public class LeaveApplicationController {
     public ResponseEntity<List<LeaveApplication>> getAllApprovedApplication(){
         return ResponseEntity.ok(this.leaveApplicationService.getAllApprovedApplication());
     }
+
     @GetMapping("/rejected")
     public ResponseEntity<List<LeaveApplication>> getAllRejectedApplication(){
         return ResponseEntity.ok(this.leaveApplicationService.getAllRejectedApplication());
@@ -47,5 +47,8 @@ public class LeaveApplicationController {
         return ResponseEntity.ok(this.leaveApplicationService.getAllApplication());
     }
 
-
+    @GetMapping("/{employeeId}")
+    public ResponseEntity<List<LeaveApplication>> getAllApplicationbyEmployeeId(@PathVariable String employeeId){
+        return ResponseEntity.ok(this.leaveApplicationService.getAllApplicationbyEmployeeId(employeeId));
+    }
 }

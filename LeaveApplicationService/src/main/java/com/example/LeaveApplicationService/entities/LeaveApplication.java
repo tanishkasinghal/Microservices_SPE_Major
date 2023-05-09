@@ -20,6 +20,8 @@ public class LeaveApplication {
     private String employeeId;
     private String leaveType;
     private String message;
+    private Date leaveFrom;
+    private Date leaveTill;
     private Date applicationDate;
     private Integer leaveStatus;
     private String remarks;

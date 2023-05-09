@@ -40,6 +40,8 @@ public class LeaveApplicationServiceImpl implements LeaveApplicationService {
         leaveApplication1.setRemarks(leaveApplication.getRemarks());
         leaveApplication1.setDateOfApproval(new Date());
         leaveApplication1.setLeaveStatus(leaveApplication.getLeaveStatus());
+        leaveApplication1.setLeaveFrom(leaveApplication.getLeaveFrom());
+        leaveApplication1.setLeaveTill(leaveApplication.getLeaveTill());
         leaveApplication1.setApplicationDate(leaveApplication.getApplicationDate());
         leaveApplication1.setEmployeeId(leaveApplication.getEmployeeId());
         return this.leaveApplicationRepository.save(leaveApplication1);
@@ -50,7 +52,6 @@ public class LeaveApplicationServiceImpl implements LeaveApplicationService {
          return applications;
     }
 
-//
     @Override
     public List<LeaveApplication> getAllPendingApplication() {
         List<LeaveApplication> pendingApplications=this.leaveApplicationRepository.findAllByLeaveStatus(AppConstants.Application_PENDING);
@@ -69,7 +70,11 @@ public class LeaveApplicationServiceImpl implements LeaveApplicationService {
         return pendingApplications;
     }
 
-
+    @Override
+    public List<LeaveApplication> getAllApplicationbyEmployeeId(String employeeId) {
+        List<LeaveApplication> applications=this.leaveApplicationRepository.findAllByEmployeeId(employeeId);
+        return applications;
+    }
 
 
 }

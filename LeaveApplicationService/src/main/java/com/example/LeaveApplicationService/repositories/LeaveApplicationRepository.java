@@ -8,4 +8,5 @@ import java.util.List;
 
 public interface LeaveApplicationRepository extends JpaRepository<LeaveApplication,String> {
     List<LeaveApplication> findAllByLeaveStatus(Integer status);
+    List<LeaveApplication> findAllByEmployeeId(String id);
 }

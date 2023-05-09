@@ -52,7 +52,7 @@ import { Base } from './Base';
     <div className="container">
 
     <div className="container-fluid">
-      <h2>Total Employees {empList.totalElements}</h2>
+      <h2>Total Employees {empList.totalElements-1}</h2>
       <Table striped>
   <thead>
     <tr>

@@ -22,6 +22,10 @@ import UserProvider from './context/UserProvider';
 
 import Profile from './user-routes/ProfileSelf';
 import UpdateDetail from './user-routes/UpdateDetail';
+import LeaveRequest from './pages/LeaveRequest';
+import EmployeeList from './components/EmployeeList';
+import LeaveResponse from './user-routes/LeaveResponse';
+import LeaveStatus from './user-routes/LeaveStatus';
 
 
 
@@ -34,8 +38,12 @@ function App() {
       <Route path="/login" element={<Login/>}/>
       <Route path="/employee" element={<PrivateRoute/>}>
         <Route path="dashboard" element={<EmployeeDashboard/>}/>
+        <Route path="employeeList" element={<EmployeeList/>}/>
+        <Route path="apply" element={<LeaveRequest/>}/>
         <Route path="addEmployee" element={<AddEmployee/>}/>
         <Route path="addDepartment" element={<AddDepartment/>}/>
+        <Route path="leaveResponse" element={<LeaveResponse/>}/>
+        <Route path="view" element={<LeaveStatus/>}/>
         <Route path="about" element={<About/>}/>
         <Route path="profile-info/:id" element={<ProfileByAdmin/>}/>
         <Route path="update-detail/:id" element={<UpdateDetail/>}/>

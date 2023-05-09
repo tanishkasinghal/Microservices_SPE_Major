@@ -46,13 +46,8 @@ const NavBar = () => {
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
             <Nav className="me-auto" navbar>
-              {/* <NavItem>
-                <NavLink tag={ReactLink} to="/home">Home</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink tag={ReactLink} to="/about">About</NavLink>
-              </NavItem> */}
-              {   
+              
+              {/* {   
                  (user) && (user.roles[0].id==501) &&  (
                     <>
                 <NavItem>
@@ -63,23 +58,8 @@ const NavBar = () => {
               </NavItem>
                     </>
                   )
-              }
+              } */}
             
-            
-              {/* <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret>
-                  More
-                </DropdownToggle>
-                <DropdownMenu right>
-                  <DropdownItem>
-                    Contact
-                  </DropdownItem>
-                  <DropdownItem divider />
-                  <DropdownItem>
-                    Services
-                  </DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown> */}
             </Nav>
             <Nav navbar>
               {

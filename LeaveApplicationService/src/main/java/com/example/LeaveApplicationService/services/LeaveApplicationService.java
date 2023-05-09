@@ -17,6 +17,6 @@ public interface LeaveApplicationService {
     List<LeaveApplication> getAllApprovedApplication();
     List<LeaveApplication> getAllRejectedApplication();
 
-
+    List<LeaveApplication> getAllApplicationbyEmployeeId(String employeeId);
     LeaveApplication submitResponse(LeaveApplication leaveApplication);
 }
