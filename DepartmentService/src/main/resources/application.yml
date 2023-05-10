@@ -28,7 +28,3 @@ spring:
     config:
       enabled: false
 
-#  config:
-#    import: optional:configserver:http://localhost:8084
-
-

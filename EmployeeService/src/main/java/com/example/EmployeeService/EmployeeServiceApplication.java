@@ -1,13 +1,12 @@
 package com.example.EmployeeService;
 
 import com.example.EmployeeService.config.AppConstants;
-<<<<<<< HEAD
+
 import com.example.EmployeeService.entity.Employee;
 import com.example.EmployeeService.entity.Role;
 import com.example.EmployeeService.repository.EmployeeRepository;
-=======
-import com.example.EmployeeService.entity.Role;
->>>>>>> aabec94818a75e8f4bf8565386eb626df2ddd963
+
+
 import com.example.EmployeeService.repository.RoleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -16,7 +15,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 
+
 import java.util.Date;
+
 
 import java.util.List;
 
@@ -28,8 +29,10 @@ public class EmployeeServiceApplication implements CommandLineRunner {
 	@Autowired
 	private RoleRepository roleRepository;
 
+
 	@Autowired
 	private EmployeeRepository employeeRepository;
+
 
 	public static void main(String[] args) {
 		SpringApplication.run(EmployeeServiceApplication.class, args);
@@ -55,6 +58,7 @@ public class EmployeeServiceApplication implements CommandLineRunner {
 		}catch (Exception e){
 			e.printStackTrace();
 		}
+
 
 		try {
 			Employee employee=new Employee();

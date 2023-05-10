@@ -13,6 +13,7 @@ spring:
     name: API-GATEWAY
 #  config:
 #    import: optional:configserver:http://configservice:8084
+
   cloud:
     gateway:
       routes:

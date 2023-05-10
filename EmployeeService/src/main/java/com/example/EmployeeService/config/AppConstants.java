@@ -6,7 +6,9 @@ public class AppConstants {
     public static final String SORT_BY="id";
     public static final String SORT_DIR="asc";
 
+
     public static final String ADMIN_EMPLOYEE_ID="123456";
+
 
 
     public static final Integer NORMAL_USER=502;
