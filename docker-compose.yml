@@ -1,0 +1,119 @@
+version: "3"
+services:
+  serviceregistry:
+    image: tanishka23/serviceregistry
+    container_name: serviceregistry
+    networks:
+      - empmgmt-network
+      
+  apigateway:
+    image: tanishka23/apigateway
+    container_name: apigateway
+    networks:
+      - empmgmt-network 
+    depends_on:
+      - serviceregistry
+
+  departmentservice:
+    image: tanishka23/departmentservice
+    container_name: departmentservice
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://serviceregistry:8761/eureka/
+      - SPRING_DATASOURCE_URL=jdbc:mysql://departmentdb/Department_Service?createDatabaseIfNotExist=true
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=root
+    networks:
+      - empmgmt-network
+    depends_on:
+      - serviceregistry
+      - apigateway
+      - departmentdb
+
+  departmentdb:
+    image: mysql:8
+    container_name: departmentdb
+    ports:
+      - "3307:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=Department_Service
+    volumes:
+      - departmentdb:/var/lib/mysql
+    networks:
+      - empmgmt-network 
+     
+  employeeservice:
+    image: tanishka23/employeeservice
+    container_name: employeeservice
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://serviceregistry:8761/eureka/
+      - SPRING_DATASOURCE_URL=jdbc:mysql://employeedb/Employee_Service?createDatabaseIfNotExist=true
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=root
+    networks:
+      - empmgmt-network
+    depends_on:
+      - serviceregistry
+      - apigateway
+      - employeedb
+      
+  employeedb:
+    image: mysql:8
+    container_name: employeedb
+    ports:
+      - "3308:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=Department_Service
+    volumes:
+      - employeedb:/var/lib/mysql
+    networks:
+      - empmgmt-network 
+      
+  leaveservice:
+    image: tanishka23/leaveservice
+    container_name: leaveservice
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://serviceregistry:8761/eureka/
+      - SPRING_DATASOURCE_URL=jdbc:mysql://leavedb/Leave_Service?createDatabaseIfNotExist=true
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=root
+    networks:
+      - empmgmt-network
+    depends_on:
+      - serviceregistry
+      - apigateway
+      - leavedb
+      
+  leavedb:
+    image: mysql:8
+    container_name: leavedb
+    ports:
+      - "3309:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=Leave_Service
+    volumes:
+      - leavedb:/var/lib/mysql
+    networks:
+      - empmgmt-network 
+      
+  frontend:
+    image: tanishka23/frontend
+    container_name: frontend
+    ports:
+      - "3000:3000"  
+    networks:
+      - empmgmt-network
+           
+networks:
+  empmgmt-network:
+    name : empmgmt-network
+
+
+volumes:
+  departmentdb:
+  employeedb:
+  leavedb:
+
+  

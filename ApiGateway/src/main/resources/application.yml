@@ -1,0 +1,46 @@
+server:
+  port: 8083
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://serviceregistry:8761/eureka
+spring:
+  application:
+    name: API-GATEWAY
+#  config:
+#    import: optional:configserver:http://configservice:8084
+  cloud:
+    gateway:
+      routes:
+      - id: EMPLOYEE-SERVICE
+        uri: lb://EMPLOYEE-SERVICE
+        predicates:
+        - Path=/employee/**,/auth/**
+#        filters:
+#          - AuthenticationFilter
+
+      - id: DEPARTMENT-SERVICE
+        uri: lb://DEPARTMENT-SERVICE
+        predicates:
+          - Path=/department/**
+#        filters:
+#          - AuthenticationFilter
+
+      - id: LEAVE-SERVICE
+        uri: lb://LEAVE-SERVICE
+        predicates:
+          - Path=/leave/**
+    config:
+      enabled: false
+
+#okta:
+#  oauth2:
+#    issuer: https://dev-63983701.okta.com/oauth2/default
+#    audience: api://default
+#    client-id: 0oa98jyr6s3QVvS6g5d7
+#    client-secret: GeyOocKDV8n_9Y8-JgIjmw0ccbNuodU_YgE2KPdS
+#    scopes: openid, profile, email, offline_access

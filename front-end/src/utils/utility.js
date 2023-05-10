@@ -1,0 +1,1 @@
+export const LeaveType = ["Sick Leave","Planned Leave","Maternity or Paternity Leave","Bereavement Leave"];
