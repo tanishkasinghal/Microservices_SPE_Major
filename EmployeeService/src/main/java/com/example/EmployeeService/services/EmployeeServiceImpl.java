@@ -76,7 +76,7 @@ public class EmployeeServiceImpl implements EmployeeService{
     {
         Employee employee=this.employeeRepository.findById(id).orElseThrow(()->new ResourceNotFoundException("Employee with given id not found"+id));
       //fetch department by empid api
-        Department department = restTemplate.getForObject("http://localhost:8081/department/" + employee.getDeptId(), Department.class);
+        Department department = restTemplate.getForObject("http://DEPARTMENT-SERVICE/department/" + employee.getDeptId(), Department.class);
         employee.setDepartment(department);
         return employee;
     }
@@ -98,7 +98,7 @@ public class EmployeeServiceImpl implements EmployeeService{
           //  String id="c3a47102-9c47-4783-88c0-0b620bacd9b3";
           //  String url = "http://DEPARTMENT-SERVICE" + "/department/" + employee.getDeptId();
         //    ResponseEntity<Department> response= restTemplate.getForEntity(url, Department.class);
-        ResponseEntity<Department> response= restTemplate.getForEntity("http://localhost:8081/department/" + employee.getDeptId(), Department.class);
+        ResponseEntity<Department> response= restTemplate.getForEntity("http://DEPARTMENT-SERVICE/department/" + employee.getDeptId(), Department.class);
             Department department = response.getBody();
             employee.setDepartment(department);
             return employee;

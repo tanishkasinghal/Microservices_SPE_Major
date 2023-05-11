@@ -33,7 +33,7 @@ public class DepartmentServiceImpl implements DepartmentService {
     {
         List<Department> departments= this.departmentRepository.findAll();
         List<Department> allDepartments= departments.stream().map(department->{
-            ArrayList<Employee> employeesInDepartment=restTemplate.getForObject("http://localhost:8082/employee/department/"+department.getDeptId()+"/", ArrayList.class);
+            ArrayList<Employee> employeesInDepartment=restTemplate.getForObject("http://EMPLOYEE-SERVICE/employee/department/"+department.getDeptId()+"/", ArrayList.class);
             department.setEmployeeList(employeesInDepartment);
             return department;
         }).collect(Collectors.toList());
@@ -46,7 +46,7 @@ public class DepartmentServiceImpl implements DepartmentService {
         //fetch employeelist
         //employeeby dept id use hoga
 
-        ArrayList<Employee> employeesInDepartment=restTemplate.getForObject("http://localhost:8082/employee/department/"+department.getDeptId()+"/", ArrayList.class);
+        ArrayList<Employee> employeesInDepartment=restTemplate.getForObject("http://EMPLOYEE-SERVICE/employee/department/"+department.getDeptId()+"/", ArrayList.class);
         department.setEmployeeList(employeesInDepartment);
         return department;
     }
