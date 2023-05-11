@@ -3,12 +3,18 @@ services:
   serviceregistry:
     image: tanishka23/serviceregistry
     container_name: serviceregistry
+    ports:
+      - "8761:8761"
     networks:
       - empmgmt-network
       
   apigateway:
     image: tanishka23/apigateway
     container_name: apigateway
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://serviceregistry:8761/eureka/
+    ports:
+      - "8083:8083"
     networks:
       - empmgmt-network 
     depends_on:
@@ -17,6 +23,8 @@ services:
   departmentservice:
     image: tanishka23/departmentservice
     container_name: departmentservice
+    ports:
+      - "8081:8081"
     environment:
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://serviceregistry:8761/eureka/
       - SPRING_DATASOURCE_URL=jdbc:mysql://departmentdb/Department_Service?createDatabaseIfNotExist=true
@@ -45,6 +53,8 @@ services:
   employeeservice:
     image: tanishka23/employeeservice
     container_name: employeeservice
+    ports:
+      - "8082:8082"
     environment:
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://serviceregistry:8761/eureka/
       - SPRING_DATASOURCE_URL=jdbc:mysql://employeedb/Employee_Service?createDatabaseIfNotExist=true
@@ -73,6 +83,8 @@ services:
   leaveservice:
     image: tanishka23/leaveservice
     container_name: leaveservice
+    ports:
+      - "8085:8085"
     environment:
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://serviceregistry:8761/eureka/
       - SPRING_DATASOURCE_URL=jdbc:mysql://leavedb/Leave_Service?createDatabaseIfNotExist=true

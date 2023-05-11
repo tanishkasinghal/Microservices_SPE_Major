@@ -1,0 +1,2 @@
+[localServer]
+mini_project_server ansible_host=localhost

@@ -47,7 +47,7 @@ const setLeaveState = (emp) => {
   const [modal, setModal] = useState(false);
   const togglePopup = () => setModal(!modal);
 
-  const submitResponse = (e, status) => {
+  const submitResponse = async  (e, status) => {
     e.preventDefault();
     setLeave({ ...leave, leaveStatus: status });
     togglePopup();
@@ -55,6 +55,7 @@ const setLeaveState = (emp) => {
     leaveResponse({ ...leave, leaveStatus: status }).then(data=>{
     console.log(data)
       setList(data)
+      window.location.reload();
   }).catch(error=>{
     toast.error("Error loading page")
   })
@@ -78,7 +79,7 @@ const handleChange=(event,property)=>{
         </ModalBody>
         <ModalFooter>
           <button color="primary" onClick={(e)=>submitResponse(e,1)}>Approve</button>
-          <button color="secondary" onlick={(e)=>submitResponse(e,2)}>Reject</button>
+          <button color="secondary" onClick={(e)=>submitResponse(e,2)}>Reject</button>
         </ModalFooter>
       </Modal>
     <Base>

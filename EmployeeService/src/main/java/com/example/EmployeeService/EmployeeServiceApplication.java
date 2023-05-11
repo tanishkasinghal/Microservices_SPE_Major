@@ -68,6 +68,7 @@ public class EmployeeServiceApplication implements CommandLineRunner {
 			Role role=this.roleRepository.findById(AppConstants.ADMIN_USER).get();
 			employee.getRoles().add(role);
 			employee.setFirstName("Admin");
+			employee.setDeptId("1");
 			employee.setEmailId("admin@gmail.com");
 			this.employeeRepository.save(employee);
 
