@@ -99,6 +99,11 @@ agent any
                 sh 'docker rmi tanishka23/frontend'
             }
         }
+        stage("Ansible Deploy"){
+            steps{
+                sh "ansible-playbook -i inventory playbook.yml"
+            }
+        }
 	}
 	
 }
