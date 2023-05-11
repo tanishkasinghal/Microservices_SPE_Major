@@ -1,2 +1,2 @@
 [localServer]
-emp_mgmt ansible_host=172.16.145.2 ansible_connection=ssh ansible_ssh_user=ansible_usr ansible_ssh_pass=ansible ansible_ssh_extra_args='-o StrictHostKeyChecking=no'
+emp_mgmt ansible_host=172.16.145.2 ansible_connection=ssh ansible_ssh_user=ansible_usr ansible_ssh_pass=ansible ansible_sudo_pass=ansible ansible_ssh_extra_args='-o StrictHostKeyChecking=no'

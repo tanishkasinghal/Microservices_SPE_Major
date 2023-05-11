@@ -1,5 +1,8 @@
 - name: Use docker compose to run all containers
   hosts: all
+  vars:
+    ansible_python_interpreter: /usr/bin/python3.10  # Specify the Python interpreter path
+
   tasks:
     - name: Start docker service
       service:
@@ -17,3 +20,4 @@
         project_src: ./
         state: present
         pull: yes
+
