@@ -1,0 +1,50 @@
+2023-May-13 10:47:45 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils       - Could not detect default configuration classes for test class [com.example.LeaveApplicationService.impl.LeaveApplicationServiceImplTest]: LeaveApplicationServiceImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-May-13 10:47:45 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper        - Found @SpringBootConfiguration com.example.LeaveApplicationService.LeaveApplicationApplication for test class com.example.LeaveApplicationService.impl.LeaveApplicationServiceImplTest
+2023-May-13 10:47:46 [background-preinit] INFO  o.h.v.i.u.Version                                  - HV000001: Hibernate Validator 8.0.0.Final
+2023-May-13 10:47:46 [main] INFO  c.e.L.i.LeaveApplicationServiceImplTest            - Starting LeaveApplicationServiceImplTest using Java 17.0.6 with PID 89817 (started by tanishka in /home/tanishka/Documents/Projects/Microservices_SPE_Major/LeaveApplicationService)
+2023-May-13 10:47:46 [main] INFO  c.e.L.i.LeaveApplicationServiceImplTest            - No active profile set, falling back to 1 default profile: "default"
+2023-May-13 10:47:47 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate          - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-May-13 10:47:48 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate          - Finished Spring Data repository scanning in 286 ms. Found 1 JPA repository interfaces.
+2023-May-13 10:47:48 [main] INFO  o.s.c.c.s.GenericScope                             - BeanFactory id=9b1abbd7-e120-3e08-9b74-522b0b78837a
+2023-May-13 10:47:50 [main] INFO  o.h.j.i.u.LogHelper                                - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-May-13 10:47:50 [main] INFO  o.h.Version                                        - HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-May-13 10:47:50 [main] INFO  c.z.h.HikariDataSource                             - HikariPool-1 - Starting...
+2023-May-13 10:47:50 [main] INFO  c.z.h.p.HikariPool                                 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2fcffc05
+2023-May-13 10:47:50 [main] INFO  c.z.h.HikariDataSource                             - HikariPool-1 - Start completed.
+2023-May-13 10:47:50 [main] INFO  SQL dialect                                        - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-May-13 10:47:50 [main] WARN  o.h.o.deprecation                                  - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-May-13 10:47:52 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator                 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-May-13 10:47:52 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean     - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-May-13 10:47:52 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-May-13 10:47:53 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2023-May-13 10:47:53 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-May-13 10:47:53 [main] INFO  o.s.c.n.e.InstanceInfoFactory                      - Setting initial instance status as: STARTING
+2023-May-13 10:47:54 [main] INFO  c.n.d.DiscoveryClient                              - Initializing Eureka in region us-east-1
+2023-May-13 10:47:54 [main] INFO  c.n.d.s.r.a.ConfigClusterResolver                  - Resolving eureka endpoints via configuration
+2023-May-13 10:47:54 [main] INFO  c.n.d.DiscoveryClient                              - Disable delta property : false
+2023-May-13 10:47:54 [main] INFO  c.n.d.DiscoveryClient                              - Single vip registry refresh property : null
+2023-May-13 10:47:54 [main] INFO  c.n.d.DiscoveryClient                              - Force full registry fetch : false
+2023-May-13 10:47:54 [main] INFO  c.n.d.DiscoveryClient                              - Application is null : false
+2023-May-13 10:47:54 [main] INFO  c.n.d.DiscoveryClient                              - Registered Applications size is zero : true
+2023-May-13 10:47:54 [main] INFO  c.n.d.DiscoveryClient                              - Application version is -1: true
+2023-May-13 10:47:54 [main] INFO  c.n.d.DiscoveryClient                              - Getting all instance registry info from the eureka server
+2023-May-13 10:47:54 [main] INFO  c.n.d.DiscoveryClient                              - The response status is 200
+2023-May-13 10:47:54 [main] INFO  c.n.d.DiscoveryClient                              - Starting heartbeat executor: renew interval is: 30
+2023-May-13 10:47:54 [main] INFO  c.n.d.InstanceInfoReplicator                       - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2023-May-13 10:47:54 [main] INFO  c.n.d.DiscoveryClient                              - Discovery Client initialized at timestamp 1683955074827 with initial instances count: 1
+2023-May-13 10:47:54 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry                  - Registering application LEAVE-SERVICE with eureka with status UP
+2023-May-13 10:47:54 [main] INFO  c.n.d.DiscoveryClient                              - Saw local status change event StatusChangeEvent [timestamp=1683955074839, current=UP, previous=STARTING]
+2023-May-13 10:47:54 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_LEAVE-SERVICE/172.16.145.2:LEAVE-SERVICE:8085: registering service...
+2023-May-13 10:47:54 [main] INFO  c.e.L.i.LeaveApplicationServiceImplTest            - Started LeaveApplicationServiceImplTest in 9.157 seconds (process running for 14.438)
+2023-May-13 10:47:54 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_LEAVE-SERVICE/172.16.145.2:LEAVE-SERVICE:8085 - registration status: 204
+2023-May-13 10:47:55 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry                  - Unregistering application LEAVE-SERVICE with eureka with status DOWN
+2023-May-13 10:47:55 [SpringApplicationShutdownHook] INFO  c.n.d.DiscoveryClient                              - Saw local status change event StatusChangeEvent [timestamp=1683955075219, current=DOWN, previous=UP]
+2023-May-13 10:47:55 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_LEAVE-SERVICE/172.16.145.2:LEAVE-SERVICE:8085: registering service...
+2023-May-13 10:47:55 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean     - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-May-13 10:47:55 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_LEAVE-SERVICE/172.16.145.2:LEAVE-SERVICE:8085 - registration status: 204
+2023-May-13 10:47:55 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource                             - HikariPool-1 - Shutdown initiated...
+2023-May-13 10:47:55 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource                             - HikariPool-1 - Shutdown completed.
+2023-May-13 10:47:55 [SpringApplicationShutdownHook] INFO  c.n.d.DiscoveryClient                              - Shutting down DiscoveryClient ...
+2023-May-13 10:47:58 [SpringApplicationShutdownHook] INFO  c.n.d.DiscoveryClient                              - Unregistering ...
+2023-May-13 10:47:58 [SpringApplicationShutdownHook] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_LEAVE-SERVICE/172.16.145.2:LEAVE-SERVICE:8085 - deregister  status: 200
+2023-May-13 10:47:58 [SpringApplicationShutdownHook] INFO  c.n.d.DiscoveryClient                              - Completed shut down of DiscoveryClient
