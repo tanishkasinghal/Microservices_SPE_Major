@@ -1361,3 +1361,96 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 2023-May-13 14:46:49 [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration          - Updating port to 8081
 2023-May-13 14:46:49 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_DEPARTMENT-SERVICE/172.16.145.2:DEPARTMENT-SERVICE:8081 - registration status: 204
 2023-May-13 14:46:49 [main] INFO  c.e.L.DepartmentServiceApplication                 - Started DepartmentServiceApplication in 5.137 seconds (process running for 6.199)
+2023-May-13 14:49:53 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.a.ConfigClusterResolver                  - Resolving eureka endpoints via configuration
+2023-May-13 14:51:49 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.a.ConfigClusterResolver                  - Resolving eureka endpoints via configuration
+2023-May-13 14:54:53 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.a.ConfigClusterResolver                  - Resolving eureka endpoints via configuration
+2023-May-13 14:56:49 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.a.ConfigClusterResolver                  - Resolving eureka endpoints via configuration
+2023-May-13 14:59:26 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_EMPLOYEE-SERVICE/172.16.145.2:EMPLOYEE-SERVICE:8082 - Re-registering apps/EMPLOYEE-SERVICE
+2023-May-13 14:59:26 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_EMPLOYEE-SERVICE/172.16.145.2:EMPLOYEE-SERVICE:8082: registering service...
+2023-May-13 14:59:26 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_EMPLOYEE-SERVICE/172.16.145.2:EMPLOYEE-SERVICE:8082 - registration status: 204
+2023-May-13 14:59:53 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.a.ConfigClusterResolver                  - Resolving eureka endpoints via configuration
+2023-May-13 15:01:49 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.a.ConfigClusterResolver                  - Resolving eureka endpoints via configuration
+2023-May-13 15:02:56 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_EMPLOYEE-SERVICE/172.16.145.2:EMPLOYEE-SERVICE:8082 - Re-registering apps/EMPLOYEE-SERVICE
+2023-May-13 15:02:56 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_EMPLOYEE-SERVICE/172.16.145.2:EMPLOYEE-SERVICE:8082: registering service...
+2023-May-13 15:02:56 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_EMPLOYEE-SERVICE/172.16.145.2:EMPLOYEE-SERVICE:8082 - registration status: 204
+2023-May-13 15:04:53 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.a.ConfigClusterResolver                  - Resolving eureka endpoints via configuration
+2023-May-13 15:04:56 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_EMPLOYEE-SERVICE/172.16.145.2:EMPLOYEE-SERVICE:8082 - Re-registering apps/EMPLOYEE-SERVICE
+2023-May-13 15:04:56 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_EMPLOYEE-SERVICE/172.16.145.2:EMPLOYEE-SERVICE:8082: registering service...
+2023-May-13 15:04:56 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_EMPLOYEE-SERVICE/172.16.145.2:EMPLOYEE-SERVICE:8082 - registration status: 204
+2023-May-13 15:06:49 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.a.ConfigClusterResolver                  - Resolving eureka endpoints via configuration
+2023-May-13 15:09:53 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.a.ConfigClusterResolver                  - Resolving eureka endpoints via configuration
+2023-May-13 15:09:56 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_EMPLOYEE-SERVICE/172.16.145.2:EMPLOYEE-SERVICE:8082 - Re-registering apps/EMPLOYEE-SERVICE
+2023-May-13 15:09:56 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_EMPLOYEE-SERVICE/172.16.145.2:EMPLOYEE-SERVICE:8082: registering service...
+2023-May-13 15:09:56 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_EMPLOYEE-SERVICE/172.16.145.2:EMPLOYEE-SERVICE:8082 - registration status: 204
+2023-May-13 15:11:26 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_EMPLOYEE-SERVICE/172.16.145.2:EMPLOYEE-SERVICE:8082 - Re-registering apps/EMPLOYEE-SERVICE
+2023-May-13 15:11:26 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_EMPLOYEE-SERVICE/172.16.145.2:EMPLOYEE-SERVICE:8082: registering service...
+2023-May-13 15:11:26 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_EMPLOYEE-SERVICE/172.16.145.2:EMPLOYEE-SERVICE:8082 - registration status: 204
+2023-May-13 15:11:49 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.a.ConfigClusterResolver                  - Resolving eureka endpoints via configuration
+2023-May-13 15:12:26 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_EMPLOYEE-SERVICE/172.16.145.2:EMPLOYEE-SERVICE:8082 - Re-registering apps/EMPLOYEE-SERVICE
+2023-May-13 15:12:26 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_EMPLOYEE-SERVICE/172.16.145.2:EMPLOYEE-SERVICE:8082: registering service...
+2023-May-13 15:12:26 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_EMPLOYEE-SERVICE/172.16.145.2:EMPLOYEE-SERVICE:8082 - registration status: 204
+2023-May-13 15:12:56 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_EMPLOYEE-SERVICE/172.16.145.2:EMPLOYEE-SERVICE:8082 - Re-registering apps/EMPLOYEE-SERVICE
+2023-May-13 15:12:56 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_EMPLOYEE-SERVICE/172.16.145.2:EMPLOYEE-SERVICE:8082: registering service...
+2023-May-13 15:12:56 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_EMPLOYEE-SERVICE/172.16.145.2:EMPLOYEE-SERVICE:8082 - registration status: 204
+2023-May-13 15:13:26 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_EMPLOYEE-SERVICE/172.16.145.2:EMPLOYEE-SERVICE:8082 - Re-registering apps/EMPLOYEE-SERVICE
+2023-May-13 15:13:26 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_EMPLOYEE-SERVICE/172.16.145.2:EMPLOYEE-SERVICE:8082: registering service...
+2023-May-13 15:13:26 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_EMPLOYEE-SERVICE/172.16.145.2:EMPLOYEE-SERVICE:8082 - registration status: 204
+2023-May-13 15:14:53 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.a.ConfigClusterResolver                  - Resolving eureka endpoints via configuration
+2023-May-13 15:16:49 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.a.ConfigClusterResolver                  - Resolving eureka endpoints via configuration
+2023-May-13 15:19:53 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.a.ConfigClusterResolver                  - Resolving eureka endpoints via configuration
+2023-May-13 15:21:49 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.a.ConfigClusterResolver                  - Resolving eureka endpoints via configuration
+2023-May-13 15:24:53 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.a.ConfigClusterResolver                  - Resolving eureka endpoints via configuration
+2023-May-13 15:26:49 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.a.ConfigClusterResolver                  - Resolving eureka endpoints via configuration
+2023-May-13 15:29:53 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.a.ConfigClusterResolver                  - Resolving eureka endpoints via configuration
+2023-May-13 15:31:49 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.a.ConfigClusterResolver                  - Resolving eureka endpoints via configuration
+2023-May-13 15:34:53 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.a.ConfigClusterResolver                  - Resolving eureka endpoints via configuration
+2023-May-13 15:36:49 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.a.ConfigClusterResolver                  - Resolving eureka endpoints via configuration
+2023-May-13 15:39:53 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.a.ConfigClusterResolver                  - Resolving eureka endpoints via configuration
+2023-May-13 15:41:49 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.a.ConfigClusterResolver                  - Resolving eureka endpoints via configuration
+2023-May-13 15:44:53 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.a.ConfigClusterResolver                  - Resolving eureka endpoints via configuration
+2023-May-13 15:45:27 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_EMPLOYEE-SERVICE/172.16.145.2:EMPLOYEE-SERVICE:8082 - Re-registering apps/EMPLOYEE-SERVICE
+2023-May-13 15:45:27 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_EMPLOYEE-SERVICE/172.16.145.2:EMPLOYEE-SERVICE:8082: registering service...
+2023-May-13 15:45:27 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_EMPLOYEE-SERVICE/172.16.145.2:EMPLOYEE-SERVICE:8082 - registration status: 204
+2023-May-13 15:46:49 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.a.ConfigClusterResolver                  - Resolving eureka endpoints via configuration
+2023-May-13 15:46:57 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_EMPLOYEE-SERVICE/172.16.145.2:EMPLOYEE-SERVICE:8082 - Re-registering apps/EMPLOYEE-SERVICE
+2023-May-13 15:46:57 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_EMPLOYEE-SERVICE/172.16.145.2:EMPLOYEE-SERVICE:8082: registering service...
+2023-May-13 15:46:57 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_EMPLOYEE-SERVICE/172.16.145.2:EMPLOYEE-SERVICE:8082 - registration status: 204
+2023-May-13 15:48:57 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_EMPLOYEE-SERVICE/172.16.145.2:EMPLOYEE-SERVICE:8082 - Re-registering apps/EMPLOYEE-SERVICE
+2023-May-13 15:48:57 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_EMPLOYEE-SERVICE/172.16.145.2:EMPLOYEE-SERVICE:8082: registering service...
+2023-May-13 15:48:57 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_EMPLOYEE-SERVICE/172.16.145.2:EMPLOYEE-SERVICE:8082 - registration status: 204
+2023-May-13 15:49:53 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.a.ConfigClusterResolver                  - Resolving eureka endpoints via configuration
+2023-May-13 15:50:27 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_EMPLOYEE-SERVICE/172.16.145.2:EMPLOYEE-SERVICE:8082 - Re-registering apps/EMPLOYEE-SERVICE
+2023-May-13 15:50:27 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_EMPLOYEE-SERVICE/172.16.145.2:EMPLOYEE-SERVICE:8082: registering service...
+2023-May-13 15:50:27 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_EMPLOYEE-SERVICE/172.16.145.2:EMPLOYEE-SERVICE:8082 - registration status: 204
+2023-May-13 15:51:49 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.a.ConfigClusterResolver                  - Resolving eureka endpoints via configuration
+2023-May-13 15:51:57 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_EMPLOYEE-SERVICE/172.16.145.2:EMPLOYEE-SERVICE:8082 - Re-registering apps/EMPLOYEE-SERVICE
+2023-May-13 15:51:57 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_EMPLOYEE-SERVICE/172.16.145.2:EMPLOYEE-SERVICE:8082: registering service...
+2023-May-13 15:51:57 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_EMPLOYEE-SERVICE/172.16.145.2:EMPLOYEE-SERVICE:8082 - registration status: 204
+2023-May-13 15:54:27 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_EMPLOYEE-SERVICE/172.16.145.2:EMPLOYEE-SERVICE:8082 - Re-registering apps/EMPLOYEE-SERVICE
+2023-May-13 15:54:27 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_EMPLOYEE-SERVICE/172.16.145.2:EMPLOYEE-SERVICE:8082: registering service...
+2023-May-13 15:54:27 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_EMPLOYEE-SERVICE/172.16.145.2:EMPLOYEE-SERVICE:8082 - registration status: 204
+2023-May-13 15:54:53 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.a.ConfigClusterResolver                  - Resolving eureka endpoints via configuration
+2023-May-13 15:56:49 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.a.ConfigClusterResolver                  - Resolving eureka endpoints via configuration
+2023-May-13 15:59:53 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.a.ConfigClusterResolver                  - Resolving eureka endpoints via configuration
+2023-May-13 16:01:27 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_EMPLOYEE-SERVICE/172.16.145.2:EMPLOYEE-SERVICE:8082 - Re-registering apps/EMPLOYEE-SERVICE
+2023-May-13 16:01:27 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_EMPLOYEE-SERVICE/172.16.145.2:EMPLOYEE-SERVICE:8082: registering service...
+2023-May-13 16:01:27 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_EMPLOYEE-SERVICE/172.16.145.2:EMPLOYEE-SERVICE:8082 - registration status: 204
+2023-May-13 16:01:49 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.a.ConfigClusterResolver                  - Resolving eureka endpoints via configuration
+2023-May-13 16:02:27 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_EMPLOYEE-SERVICE/172.16.145.2:EMPLOYEE-SERVICE:8082 - Re-registering apps/EMPLOYEE-SERVICE
+2023-May-13 16:02:27 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_EMPLOYEE-SERVICE/172.16.145.2:EMPLOYEE-SERVICE:8082: registering service...
+2023-May-13 16:02:27 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_EMPLOYEE-SERVICE/172.16.145.2:EMPLOYEE-SERVICE:8082 - registration status: 204
+2023-May-13 16:02:57 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_EMPLOYEE-SERVICE/172.16.145.2:EMPLOYEE-SERVICE:8082 - Re-registering apps/EMPLOYEE-SERVICE
+2023-May-13 16:02:57 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_EMPLOYEE-SERVICE/172.16.145.2:EMPLOYEE-SERVICE:8082: registering service...
+2023-May-13 16:02:57 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_EMPLOYEE-SERVICE/172.16.145.2:EMPLOYEE-SERVICE:8082 - registration status: 204
+2023-May-13 16:03:27 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_EMPLOYEE-SERVICE/172.16.145.2:EMPLOYEE-SERVICE:8082 - Re-registering apps/EMPLOYEE-SERVICE
+2023-May-13 16:03:27 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_EMPLOYEE-SERVICE/172.16.145.2:EMPLOYEE-SERVICE:8082: registering service...
+2023-May-13 16:03:27 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_EMPLOYEE-SERVICE/172.16.145.2:EMPLOYEE-SERVICE:8082 - registration status: 204
+2023-May-13 16:04:53 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.a.ConfigClusterResolver                  - Resolving eureka endpoints via configuration
+2023-May-13 16:06:49 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.a.ConfigClusterResolver                  - Resolving eureka endpoints via configuration
+2023-May-13 16:07:27 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_EMPLOYEE-SERVICE/172.16.145.2:EMPLOYEE-SERVICE:8082 - Re-registering apps/EMPLOYEE-SERVICE
+2023-May-13 16:07:27 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_EMPLOYEE-SERVICE/172.16.145.2:EMPLOYEE-SERVICE:8082: registering service...
+2023-May-13 16:07:27 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_EMPLOYEE-SERVICE/172.16.145.2:EMPLOYEE-SERVICE:8082 - registration status: 204
+2023-May-13 16:09:53 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.a.ConfigClusterResolver                  - Resolving eureka endpoints via configuration
+2023-May-13 16:10:27 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_EMPLOYEE-SERVICE/172.16.145.2:EMPLOYEE-SERVICE:8082 - Re-registering apps/EMPLOYEE-SERVICE
+2023-May-13 16:10:27 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_EMPLOYEE-SERVICE/172.16.145.2:EMPLOYEE-SERVICE:8082: registering service...
+2023-May-13 16:10:27 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.DiscoveryClient                              - DiscoveryClient_EMPLOYEE-SERVICE/172.16.145.2:EMPLOYEE-SERVICE:8082 - registration status: 204
