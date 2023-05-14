@@ -1,5 +1,5 @@
 import React, {useEffect, useContext, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { Base } from '../components/Base'
 import userContext from '../context/userContext'
 import { Form,Button, Card, CardBody, CardHeader, Col, Container, FormGroup, Input, Label, Row } from 'reactstrap'
@@ -18,7 +18,7 @@ const UpdateDetail = () => {
     //     password:'',
     //     deptId:'',
     // })
-
+    const navigate=useNavigate()
     useEffect(() => {
         loadEmp(id).then(data=>{
       
@@ -64,6 +64,7 @@ const UpdateDetail = () => {
         updateDetail(emp).then((resp)=>{
             console.log(resp)
             alert("Employee Updated")
+            navigate("/employee/dashboard")
         }).catch((error)=>{
             alert("Error")
            // console.log(error)
